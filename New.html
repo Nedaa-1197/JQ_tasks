@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+			$("tr:first").css("background-color","black");
+			$("tr:odd").css("background-color","#c4bdbc");
+			//var x=$("div").html();
+			//alert(x);
+			//$("div").html("HTU");
+			//$("div").append(" University");
+			//$("div").prepend("The ");
+			//$("div").after("<hr>");
+			$("a").attr("target","_blank");
+			$("a").removeAttr("href");
+
+			$("#btn1").click(function(){
+				$("a").hide("1000");
+			});
+			$("#btn2").click(function(){
+				$("a").show("1000");
+			});
+			$("#btn3").click(function(){
+				$("a").toggle("1000");
+			});
+			//--------------------------------------------Q1------------------------
+
+			$("#btn5").click(function(){
+				$("#divA2").show("1000");
+			});
+
+			//---------------------------------Q2------------------------------
+
+			$("#btn6").click(function(){
+				$("#correct").css("color","green");
+			    $(".notCorr").css("color","red");
+		   });
+			//------------------------------------------------------------------
+			//--------------------calculate Q3----------------------------
+			$("#plus").click(function(){
+				var a = $("#IN1").val();
+				var b = $("#IN2").val();
+				var ans = parseInt(a) + parseInt(b);
+				$("#IN3").val(ans);
+			});
+			//------------------------------------------------------------------
+			
+			$("#minus").click(function(){
+				var a = $("#IN1").val();
+				var b = $("#IN2").val();
+				var ans = parseInt(a) - parseInt(b);
+				$("#IN3").val(ans);
+			});
+
+			//------------------------------------------------------------------
+			
+			$("#multiply").click(function(){
+				var a = $("#IN1").val();
+				var b = $("#IN2").val();
+				var ans = parseInt(a) * parseInt(b);
+				$("#IN3").val(ans);
+			});
+			//------------------------------------------------------------------
+			
+			$("#divide").click(function(){
+				var a = $("#IN1").val();
+				var b = $("#IN2").val();
+				var ans = parseInt(a) / parseInt(b);
+				$("#IN3").val(ans);
+			});
+			//---------------------------------------------
+			//-------------------Q4------------------------------------------
+			
+			
+
+			$("#s1").change(function(){
+				if($(this).val() =='1'){
+					$("#s2").show();
+					$("#s3").hide();
+					$("#s4").hide();
+					$("#s5").hide();
+				}
+
+				else if($(this).val() =='2'){
+					$("#s2").hide();
+					$("#s3").show();
+					$("#s4").hide();
+					$("#s5").hide();
+				}
+
+				else if($(this).val() =='3'){
+					$("#s2").hide();
+					$("#s3").hide();
+					$("#s4").show();
+					$("#s5").show();
+				}
+			});
+			//----------------------------------------------------------------------
+			$("#btnN").click(function(){
+				$("#divN").animate({left:'500px'});
+			});
+		});	
+	</script>
+</head>
+<body>
+	<table border="1" width="100%">
+		<tr>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+	<br>
+	<div>This is a content</div>
+	<div>This is a content</div>
+	<div>This is a content</div>
+	<div>This is a content</div>
+
+	<a href="http://www.google.com">GOOGLE</a>
+	<a href="http://www.facebook.com">FACEBOOK</a>
+	<a href="http://www.youtube.com">YOUTUBE</a>
+	<button id="btn1">Hide</button>
+	<button id="btn2">Show</button>
+	<button id="btn3">Hide / Show</button>
+	<br>
+	<hr>
+
+	
+
+	<hr>
+	<hr>
+	
+	<div id="divQ2">What is HTML?</div>
+	<button id="btn5">Show</button>
+	<div id="divA2" style="display: none;"> HTML is HyperText Markup Language</div>
+
+	<hr>
+	<hr>
+	<div>Where is HTU?</div>
+	<form>
+		<input type="radio" name="Amman"><lable id="correct">Amman</lable><br>
+		<input type="radio" name="Irbid"><lable class="notCorr">Irbid</lable><br>
+		<input type="radio" name="Aqaba"><lable class="notCorr">Aqaba</lable><br>
+		<input type="radio" name="Zarqa"><lable class="notCorr">Zarqa</lable><br>
+	</form>
+	<button id="btn6">Check Answer</button>
+	<hr>
+
+	
+	<label>num1:</label>
+	<input type="number" id="IN1" placeholder="0"><br>
+
+	<label>num2:</label>
+	<input type="number" id="IN2" placeholder="0">
+	<br>
+
+	<button id="plus">+</button>
+	<button id="minus">-</button>
+	<button id="multiply">*</button>
+	<button id="divide">/</button>
+	<br>
+
+	
+	<button id="res">Result:</button>
+	<input type="number" id="IN3" placeholder="0" readonly="readonly">
+	
+
+	<hr>
+	<hr>
+	<form>
+		<select id="s1">
+			<option selected="selected" disabled="disabled" value="4">country</option>
+			<option id="jor" value="1">Jordan</option>
+			<option id="leb" value="2">Lebanon</option>
+			<option id="usa" value="3">Usa</option>
+		</select>
+
+		<select id="s2" style="display: none;">
+			<option selected="selected" disabled="disabled">City</option>
+			<option>Amman</option>
+			<option>Irbid</option>
+			<option>Zarqa</option>
+		</select>
+
+		<select id="s3"  style="display: none;">
+			<option selected="selected" disabled="disabled">City</option>
+			<option>Beirut</option>
+			<option>Sidon</option>
+			<option>Tripoli</option>
+		</select>
+
+		<select id="s4" style="display: none;">
+			<option selected="selected" disabled="disabled">State</option>
+			<option>Washington</option>
+			<option>New York</option>
+			<option>Hawaii</option>
+		</select>
+		<select id="s5"  style="display: none;">
+			<option selected="selected" disabled="disabled">Postal Code</option>
+			<option>121</option>
+			<option>232</option>
+			<option>343</option>
+		</select>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="divN" style="position: absolute; width: 200px; height: 100px; background-color: red; top: 300px; left: 0px;">This is a div</div>
+	<button id="btnN">Ok</button>
+
+	
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+#i1{
+	position: absolute;
+    color: black;
+    visibility: visible!important;
+
+}
+#btn{
+	width: 70px;
+	height: 50px;
+	color: #000;
+	float: right;
+}
+#div1{
+	height: 100px;
+}
+#div2{
+	display: none;
+	height: 300px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-size: 50px;
+	background-color: black;
+}
+.a2{
+	color: #fff;
+	text-decoration: none;
+	font-size: 50px;
+}
+
+.dA{
+	position: relative;
+	display: inline-block;
+	background-color: #e835e5;
+	width: 150px;
+	height: 150px;
+}
+.dB{
+	position: relative;
+	display: inline-block;
+	background-color: #571156;
+	width: 150px;
+	height: 150px;
+}
+#big{
+	margin-left: 250px;
+}
+
+
+
+
